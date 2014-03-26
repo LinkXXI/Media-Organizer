@@ -6,9 +6,47 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.kevinzoelee.mediaorganizer.controllers.MainController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
-</AnchorPane>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/2.2" fx:controller="ca.kevinzoelee.mediaorganizer.controllers.MainController">
+    <left>
+        <TabPane prefHeight="576.0" prefWidth="800.0" side="TOP" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="TOP_LEFT">
+            <tabs>
+                <Tab text="Movies" >
+                    <content>
+                        <fx:include source="Movies.fxml"/>
+                    </content>
+                </Tab>
+                <!--<Tab content="Music.fxml" text="Music"  >
+                    <content>
+                        <fx:include source="Music.fxml"/>
+                    </content>
+                </Tab>
+                <Tab content="Games.fxml" text="Games"  >
+                    <content>
+                        <fx:include source="Games.fxml"/>
+                    </content>-->
+                </Tab>
+            </tabs>
+        </TabPane>
+    </left>
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>
